@@ -39,6 +39,7 @@ export default async function decorate(block) {
 
     const navSections = [...nav.children][1];
     if (navSections) {
+      console.log('navigation interaction');
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
         navSection.addEventListener('click', () => {
